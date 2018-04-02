@@ -1,6 +1,6 @@
-ifneq ($(filter dreamqlte dream2qlte greatqlte,$(TARGET_DEVICE)),)
-
 LOCAL_PATH := $(call my-dir)
+
+ifneq ($(filter greatqlte, $(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
