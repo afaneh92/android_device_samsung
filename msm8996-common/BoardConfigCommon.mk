@@ -31,7 +31,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_PREBUILT_KERNEL := device/samsung/msm8996-common/kernel
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 
 # Boot image
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom androidboot.bootdevice=624000.ufshc androidboot.selinux=permissive user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=24M@0-0xffffffff rcupdate.rcu_expedited=1
@@ -52,11 +52,7 @@ BOARD_FLASH_BLOCK_SIZE := 0x40000
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-TARGET_RECOVERY_DEVICE_DIRS := device/samsung/msm8996-common
-
-# Safestrap build flags
-COMMON_GLOBAL_CFLAGS += -DBUILD_SAFESTRAP
-COMMON_GLOBAL_CPPFLAGS += -DBUILD_SAFESTRAP
+TARGET_RECOVERY_DEVICE_DIRS := $(LOCAL_PATH)
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -78,3 +74,6 @@ TW_INCLUDE_CRYPTO := true
 
 # Asian region languages
 TW_EXTRA_LANGUAGES := true
+
+# System properties
+-include $(LOCAL_PATH)/system_prop.mk

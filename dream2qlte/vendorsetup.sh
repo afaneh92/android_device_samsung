@@ -1,1 +1,1 @@
-add_lunch_combo omni_dreamqlte-eng
+add_lunch_combo omni_dreamq2lte-eng
