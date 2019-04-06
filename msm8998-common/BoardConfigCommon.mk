@@ -61,13 +61,13 @@ TW_MAX_BRIGHTNESS := 36500
 TW_DEFAULT_BRIGHTNESS := 15000
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
+TW_HAS_EDL_MODE := true
 TW_INCLUDE_NTFS_3G := true
-TW_EXCLUDE_SUPERSU := true
+TW_USE_NEW_MINADBD := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXTRA_LANGUAGES := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_INPUT_BLACKLIST := "sec_e-pen-pad"
+TW_MTP_DEVICE := "/dev/mtp_usb"
 # Encryption support
 TW_INCLUDE_CRYPTO := true
-
-# System properties
--include $(LOCAL_PATH)/system_prop.mk

@@ -1,3 +1,0 @@
-# USB
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	sys.usb.controller=a800000.dwc3
