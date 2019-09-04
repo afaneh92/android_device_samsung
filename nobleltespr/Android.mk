@@ -1,6 +1,6 @@
-ifneq ($(filter nobleltevzw noblelteatt nobleltespr,$(TARGET_DEVICE)),)
-
 LOCAL_PATH := $(call my-dir)
+
+ifneq ($(filter nobleltespr, $(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
