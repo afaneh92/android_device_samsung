@@ -1,5 +1,5 @@
-# inherit from common
--include device/samsung/d2-common/BoardConfigCommon.mk
+# Recovery
+TARGET_OTA_ASSERT_DEVICE := d2vzw
 
-# inherit from the proprietary version
--include vendor/samsung/d2vzw/BoardConfigVendor.mk
+# Inherit common board flags
+-include device/samsung/d2-common/BoardConfigCommon.mk

@@ -1,9 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),d2vzw)
+ifneq ($(filter d2vzw, $(TARGET_DEVICE)),)
 
-ifneq ($(TARGET_SIMULATOR),true)
-include $(call first-makefiles-under,$(LOCAL_PATH))
-endif
+include $(call all-makefiles-under,$(LOCAL_PATH))
 
 endif
