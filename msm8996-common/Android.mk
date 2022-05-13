@@ -1,4 +1,4 @@
-ifneq ($(filter dreamqlte dream2qlte greatqlte,$(TARGET_DEVICE)),)
+ifneq ($(filter heroqlte hero2qlte graceqlte,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
