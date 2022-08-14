@@ -1,12 +1,13 @@
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Release name
+PRODUCT_RELEASE_NAME := kltevzw
 
-# Inherit from device
-$(call inherit-product, device/samsung/kltevzw/device.mk)
+$(call inherit-product, build/target/product/embedded.mk)
 
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := omni_kltevzw
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
+## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := kltevzw
+PRODUCT_NAME := omni_kltevzw
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SM-G900V
